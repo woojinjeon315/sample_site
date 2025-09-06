@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;600&display=swap');
+
+:root {
+    --main-bg-color: #f8f9fa;
+    --container-bg-color: #ffffff;
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --text-color: #212529;
+    --light-text-color: #6c757d;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* 모바일 화면을 위한 좌우 여백 추가 */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--container-bg-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+h2.question-text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.6;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 질문 텍스트 중앙 정렬 */
+    text-align: center; /* 여러 줄일 경우를 대비한 중앙 정렬 */
+}
+
+p {
+    color: var(--light-text-color);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+button {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* 질문 페이지 */
+#qna-page {
+    width: 100%;
+}
+
+.status {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.4s ease;
+}
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.answer-btn {
+    width: 45%;
+}
+
+/* 결과 페이지 (수정된 부분) */
+.result-title {
+    font-size: 18px;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.result-content {
+    width: 100%;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center; /* ✨ 핵심 수정: 내부 텍스트를 중앙으로 정렬합니다. */
+}
+
+#result-name {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+#result-feature-title {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0;
+}
+#result-description {
+    font-size: 16px;
+    color: var(--light-text-color);
+    margin: 0.5rem 0 0 0;
+}
